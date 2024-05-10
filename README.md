@@ -1,6 +1,23 @@
 # 학생 CRUD API
 고등학교 학생 관리 서비스
 
+## Json Response?
+Json이란 JavaScript Object Notaion 으로 객체를 표현하는 방법입니다.
+
+Json은 xml과 마찬가지로 서버와 클라이언트 간의 데이터 송수신에 자주 사용됩니다.
+
+Spring 프레임워크 에서는 Jackson 라이브러리를 통해 자바 객체와 Json을 변환합니다. (Object Mapper 역시 Jackson과 의존 관계)
+
+Jackson은 기본적으로 메서드를 이용하여 자바 객체를 다룹니다. (getter, setter)
+
+그렇기에 인스턴스 변수의 접근 제한자가 private등 이어도 getter/setter만 있으면 사용할 수 있습니다.
+
+
+
+response를 application/json으로 하기 위한 간단한 방법으로는 아래와 같은 방법을 사용할 수 있습니다.
+1. 직접 servletResponse를 조작한다. (Jackson, SimpleJson등 사용)
+2. 컨트롤러 메서드의 반환 타입을 @ResponseBody, ResponseEntity<>등을 객체로 합니다. (권장)
+
 ## API
 >학생 생성 API
 
